@@ -1,46 +1,50 @@
 import { Rocket, Layers, Scale, MessageCircle, Headphones, Award } from "lucide-react";
 
 const items = [
-  { n: "01", icon: Rocket, title: "Fast Delivery ✨", desc: "We deliver projects on time without compromising quality. Agile methodology ensures rapid iterations.", tag: "3-5x faster", color: "from-blue-400 to-cyan-400" },
-  { n: "02", icon: Layers, title: "Modern Tech Stack 💻", desc: "Built with React, Node.js, and cloud-native solutions for future-proof, maintainable products.", tag: "Future-proof", color: "from-purple-400 to-indigo-500" },
-  { n: "03", icon: Scale, title: "Scalable Solutions 📈", desc: "Our architecture grows seamlessly with your business, from startups to enterprise-level scale.", tag: "Enterprise-ready", color: "from-emerald-400 to-teal-500" },
-  { n: "04", icon: MessageCircle, title: "Transparent Communication 📝", desc: "Regular updates, clear documentation, and open communication keep you in control.", tag: "Clear updates", color: "from-yellow-400 to-orange-400" },
-  { n: "05", icon: Headphones, title: "24/7 Support ☎️", desc: "Our team is always ready to help, ensuring smooth operations at all times.", tag: "Always available", color: "from-pink-400 to-rose-500" },
-  { n: "06", icon: Award, title: "Premium Quality 🏆", desc: "Attention to detail in every line of code and pixel ensures excellence you can trust.", tag: "Pixel-perfect", color: "from-violet-400 to-purple-500" },
+  { n: "01", icon: Rocket, title: "Fast Delivery", desc: "We deliver projects on time without compromising quality. Agile sprints, rapid iterations.", tag: "3-5x faster" },
+  { n: "02", icon: Layers, title: "Modern Stack", desc: "React, Node.js and cloud-native — future-proof, maintainable foundations.", tag: "Future-proof" },
+  { n: "03", icon: Scale, title: "Scalable Solutions", desc: "Architecture that grows seamlessly from startup to enterprise scale.", tag: "Enterprise-ready" },
+  { n: "04", icon: MessageCircle, title: "Transparent Communication", desc: "Regular updates, clear documentation, and open channels. You're always in control.", tag: "Clear updates" },
+  { n: "05", icon: Headphones, title: "Dedicated Support", desc: "We stay close after launch — fixes, improvements, and strategic guidance when you need it.", tag: "Always available" },
+  { n: "06", icon: Award, title: "Premium Quality", desc: "Pixel-level care in design, line-level care in code. Excellence you can feel.", tag: "Pixel-perfect" },
 ];
 
 export function WhyChoose() {
   return (
-    <section className="py-24 px-6 bg-secondary/40">
+    <section className="relative py-28 px-6">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-5xl md:text-6xl font-bold tracking-tight">
-            <span className="underline-yellow">Why Choose</span>
-            <br />
-            <span className="text-gradient-primary">Dewtronai?</span>
+        <div className="text-center mb-20 max-w-2xl mx-auto">
+          <span className="inline-flex items-center gap-2 glass rounded-full px-4 py-1.5 text-xs font-medium text-primary-glow">
+            <span className="h-1.5 w-1.5 rounded-full bg-primary-glow" />
+            Why Dewtronai
+          </span>
+          <h2 className="mt-6 text-5xl md:text-6xl font-semibold tracking-tight leading-[1.05]">
+            Built for{" "}
+            <span className="font-serif-italic text-gradient-primary">real results</span>,
+            not just code.
           </h2>
-          <p className="mt-6 text-muted-foreground max-w-xl mx-auto">
-            Not all agencies are created equal. Here's why leading businesses trust us.
+          <p className="mt-6 text-muted-foreground text-lg">
+            Not all agencies are created equal. Here's why leading teams trust us.
           </p>
-          <div className="mt-6 inline-flex items-center gap-2 bg-accent/40 border border-primary/15 px-4 py-2 rounded-full text-sm text-primary">
-            ✦ Built for real results, not just code
-          </div>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px overflow-hidden rounded-3xl glass border border-border/40">
           {items.map((it) => (
-            <div key={it.n} className="relative bg-card rounded-2xl p-6 shadow-card hover:shadow-elegant transition-all">
-              <div className="absolute -top-3 left-6 h-8 w-8 rounded-full bg-gradient-to-br from-accent-orange to-accent-yellow text-white text-xs font-bold flex items-center justify-center shadow-soft">
-                {it.n}
-              </div>
+            <div
+              key={it.n}
+              className="group relative bg-background/40 p-8 hover:bg-background/60 transition-colors"
+            >
               <div className="flex items-start justify-between">
-                <div className={`h-14 w-14 rounded-xl bg-gradient-to-br ${it.color} text-white flex items-center justify-center shadow-soft`}>
-                  <it.icon className="h-7 w-7" />
+                <div className="h-12 w-12 rounded-2xl bg-gradient-primary/15 border border-primary/20 grid place-items-center text-primary-glow shadow-soft group-hover:shadow-glow transition-shadow">
+                  <it.icon className="h-5 w-5" />
                 </div>
-                <span className="text-xs bg-accent/60 text-primary px-3 py-1 rounded-full">{it.tag}</span>
+                <span className="text-[11px] text-muted-foreground font-mono">{it.n}</span>
               </div>
-              <h3 className="mt-5 font-bold text-lg">{it.title}</h3>
+              <h3 className="mt-6 font-semibold text-lg">{it.title}</h3>
               <p className="text-sm text-muted-foreground mt-2 leading-relaxed">{it.desc}</p>
+              <span className="inline-block mt-5 text-[11px] bg-white/5 border border-white/5 text-muted-foreground px-2.5 py-1 rounded-full">
+                {it.tag}
+              </span>
             </div>
           ))}
         </div>
