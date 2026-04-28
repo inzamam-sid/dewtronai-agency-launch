@@ -11,7 +11,8 @@ const schema = z.object({
 });
 
 const WHATSAPP = "9721510913";
-const EMAIL = "inzamamsiddiqui0018@gmail.com";
+const EMAIL = "inzamamsiddiqui15@gmail.com";
+const WHATSAPP_URL = `https://wa.me/91${WHATSAPP}?text=${encodeURIComponent("Hi Dewtronai, I'd like to discuss a project.")}`;
 
 export function Contact() {
   const [loading, setLoading] = useState(false);
@@ -77,13 +78,13 @@ export function Contact() {
 
             <div className="space-y-4">
               <ContactRow icon={Mail} label="Email us" value={EMAIL} href={`mailto:${EMAIL}`} color="from-purple-400 to-indigo-500" />
-              <ContactRow icon={Phone} label="Call / WhatsApp us" value={`+91 ${WHATSAPP}`} href={`tel:+91${WHATSAPP}`} color="from-amber-400 to-orange-400" />
+              <ContactRow icon={Phone} label="Call / WhatsApp us" value={`+91 ${WHATSAPP}`} href={WHATSAPP_URL} external color="from-amber-400 to-orange-400" />
               <ContactRow icon={MapPin} label="Visit us" value="India — Remote-first agency" color="from-rose-400 to-pink-500" />
             </div>
 
             <div className="mt-6 grid grid-cols-2 gap-3">
               <a
-                href={`https://wa.me/91${WHATSAPP}?text=Hi%20Dewtronai%2C%20I%27d%20like%20to%20discuss%20a%20project.`}
+                href={WHATSAPP_URL}
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center justify-center gap-2 bg-gradient-primary text-primary-foreground px-5 py-3 rounded-full font-semibold shadow-elegant hover:opacity-95 transition"
@@ -177,7 +178,7 @@ function Field({ label, children, className = "" }: { label: string; children: R
   );
 }
 
-function ContactRow({ icon: Icon, label, value, href, color }: { icon: any; label: string; value: string; href?: string; color: string }) {
+function ContactRow({ icon: Icon, label, value, href, color, external }: { icon: any; label: string; value: string; href?: string; color: string; external?: boolean }) {
   const inner = (
     <div className="flex items-center gap-4 bg-card rounded-2xl p-4 shadow-card hover:shadow-elegant transition-shadow">
       <div className={`h-12 w-12 rounded-xl bg-gradient-to-br ${color} text-white flex items-center justify-center`}>
@@ -189,5 +190,7 @@ function ContactRow({ icon: Icon, label, value, href, color }: { icon: any; labe
       </div>
     </div>
   );
-  return href ? <a href={href}>{inner}</a> : inner;
+  return href ? (
+    <a href={href} {...(external ? { target: "_blank", rel: "noreferrer" } : {})}>{inner}</a>
+  ) : inner;
 }
