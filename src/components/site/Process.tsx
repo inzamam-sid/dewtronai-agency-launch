@@ -56,7 +56,7 @@ export function Process() {
   );
 }
 
-function Card({ s }: { s: (typeof import("./Process"))["steps"] extends never ? never : any }) {
+function Card({ s }: { s: { n: number; icon: any; title: string; tag: string; desc: string } }) {
   const Icon = s.icon;
   return (
     <div className="bg-card rounded-2xl p-6 shadow-card hover:shadow-elegant transition-shadow">
