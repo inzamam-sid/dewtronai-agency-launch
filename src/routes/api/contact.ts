@@ -8,7 +8,7 @@ const schema = z.object({
   message: z.string().trim().min(10).max(2000),
 });
 
-const TO_EMAIL = "inzamamsiddiqui0018@gmail.com";
+const TO_EMAIL = "inzamamsiddiqui15@gmail.com";
 
 export const Route = createFileRoute("/api/contact")({
   server: {
