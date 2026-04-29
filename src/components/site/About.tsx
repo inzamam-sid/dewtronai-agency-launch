@@ -77,7 +77,7 @@ export function About() {
                 </div>
                 <h4 className="font-semibold text-base">{f.title}</h4>
                 <p className="text-sm text-muted-foreground mt-2 leading-relaxed">{f.desc}</p>
-                <span className="inline-block mt-4 text-[11px] bg-white/5 border border-white/5 text-muted-foreground px-2.5 py-1 rounded-full">
+                <span className="inline-block mt-4 text-[11px] bg-secondary border border-border text-muted-foreground px-2.5 py-1 rounded-full">
                   {f.tag}
                 </span>
               </div>

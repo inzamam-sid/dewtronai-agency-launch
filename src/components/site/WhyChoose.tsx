@@ -42,7 +42,7 @@ export function WhyChoose() {
               </div>
               <h3 className="mt-6 font-semibold text-lg">{it.title}</h3>
               <p className="text-sm text-muted-foreground mt-2 leading-relaxed">{it.desc}</p>
-              <span className="inline-block mt-5 text-[11px] bg-white/5 border border-white/5 text-muted-foreground px-2.5 py-1 rounded-full">
+              <span className="inline-block mt-5 text-[11px] bg-secondary border border-border text-muted-foreground px-2.5 py-1 rounded-full">
                 {it.tag}
               </span>
             </div>

@@ -84,7 +84,7 @@ export function Portfolio() {
                   {p.tech.map((t) => (
                     <span
                       key={t}
-                      className="text-[11px] px-2.5 py-1 rounded-md bg-white/5 border border-white/5 text-muted-foreground"
+                      className="text-[11px] px-2.5 py-1 rounded-md bg-secondary border border-border text-muted-foreground"
                     >
                       {t}
                     </span>
