@@ -78,7 +78,7 @@ export function Services() {
                   {s.tags.map((t) => (
                     <span
                       key={t}
-                      className="text-[11px] px-2.5 py-1 rounded-full bg-white/5 border border-white/5 text-muted-foreground"
+                      className="text-[11px] px-2.5 py-1 rounded-full bg-secondary border border-border text-muted-foreground"
                     >
                       {t}
                     </span>
