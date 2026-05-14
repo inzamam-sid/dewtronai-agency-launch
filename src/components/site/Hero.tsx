@@ -23,13 +23,15 @@ export function Hero() {
         </div>
 
         {/* Headline */}
-        <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-[5.5rem] font-semibold leading-[1.02] tracking-tight max-w-5xl mx-auto">
+        <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-[6.5rem] font-semibold leading-[1.02] tracking-tight max-w-5xl mx-auto">
+        {/* <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-[5.5rem] font-semibold leading-[1.02] tracking-tight max-w-6xl mx-auto"> */}
           We craft{" "}
           <span className="font-serif-italic text-gradient-primary">premium</span>{" "}
           digital products that
           <br className="hidden md:block" />{" "}
           <span className="relative inline-block">
-            <span className="bg-gradient-primary bg-clip-text text-transparent">
+            {/* <span className="bg-gradient-primary bg-clip-text text-transparent"> */}
+            <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
               scale revenue.
             </span>
             <svg
