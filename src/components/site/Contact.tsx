@@ -10,8 +10,8 @@ const schema = z.object({
   message: z.string().trim().min(10, "Message must be at least 10 characters").max(2000),
 });
 
-const WHATSAPP = "9721510913";
-const EMAIL = "inzamamsiddiqui15@gmail.com";
+const WHATSAPP = "9700000000";
+const EMAIL = "dewtronai@gmail.com";
 const WHATSAPP_URL = `https://wa.me/91${WHATSAPP}?text=${encodeURIComponent("Hi Dewtronai, I'd like to discuss a project.")}`;
 
 export function Contact() {
